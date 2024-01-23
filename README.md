@@ -30,7 +30,7 @@ fn main() {
 }
 ```
 
-If you need full control over stdout, you can create an mutexed arch
+If you need full control over stdout, you can create a mutexed arc
 
 
 ```rust
@@ -42,7 +42,7 @@ If you need full control over stdout, you can create an mutexed arch
         .start();
 ```
 
-You can i you want to, change the awesome spinner
+You can if you want to, change the awesome spinner
 
 ```rust
     let mut spinner = Spinner::builder()
