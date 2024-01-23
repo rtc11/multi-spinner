@@ -3,6 +3,11 @@ name = "multi-spinner"
 version = "0.1.0"
 edition = "2021"
 authors = ["Robin <robin.tordly@gmail.com"]
+description = "A simple multi-threaded spinner for the terminal"
+repository = "https://github.com/rtc11/multi-spinner/"
+license = "MIT"
+keywords = ["spinner", "terminal", "multiple", "shared"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 anyhow = "1.0.79"
@@ -18,8 +23,9 @@ nursery = "deny"
 unwrap_used = "deny"
 
 [profile.release]
-opt-level = 'z'
-lto = true
-codegen-units = 1
-panic = 'abort'
-strip = "symbols"
+opt-level = 'z'     # Optimize for size
+lto = true          # Enable link-time optimization       
+codegen-units = 1   # Compile everything in one unit (faster compilation)
+panic = 'abort'     # Abort on panic (faster execution)
+strip = "symbols"   # Strip symbols from the binary (smaller binary)
+

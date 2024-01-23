@@ -168,7 +168,7 @@ impl SpinnerBuilder {
 
     /// Message to display after the spinner.
     pub fn msg(mut self, msg: String) -> Self {
-        self.msg = msg;
+        self.msg = msg + "\n";
         self
     }
 
